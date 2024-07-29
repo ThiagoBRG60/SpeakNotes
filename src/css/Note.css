@@ -1,0 +1,295 @@
+.note {
+   width: 370px;
+   height: 300px;
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-radius: 10px;
+   color: #FF9F00;
+   background-color: #FEF2DE;
+   position: relative;
+   transition: 0.4s;
+   animation: appear 0.4s ease;
+}
+@keyframes appear {
+   from {
+      transform: scale(0.5);
+   }to {
+      transform: scale(1);
+   }
+}
+.date-icon-info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.date-icon-info span {
+   width: 35px;
+   height: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+   background-color: #FF9F00;
+}
+.date-icon-info svg {
+   width: 16px;
+   color: #fff;
+}
+.date-icon-info span.delete,
+.note.todo .date-icon-info span.delete,
+.note.work .date-icon-info span.delete,
+.note.study .date-icon-info span.delete,
+.note.health .date-icon-info span.delete,
+.note.finance .date-icon-info span.delete,
+.note.travel .date-icon-info span.delete,
+.note.creativity .date-icon-info span.delete {
+   background-color: transparent;
+}
+.date-icon-info span.delete svg {
+   width: 20px;
+   color: #D62F42;
+   cursor: pointer;
+   transition: 0.4s;
+}
+.date-icon-info span.delete svg:hover {
+   transform: scale(1.1);
+}
+.title-input {
+   color: #FF9F00;
+   font-size: 18.5px;
+   font-weight: 600;
+   outline: 0;
+   border: 0;
+   background-color: transparent;
+   outline: 1px solid #FF9F00;
+   padding: 5px 0;
+}
+.title-input::placeholder, .note-text::placeholder {
+   color: #FF9F00;
+}
+.note-text {
+   width: 280px;
+   height: 150px;
+   font-size: 16px;
+   margin-top: 5px;
+   color: #FF9F00;
+   border: 0;
+   resize: none;
+   scrollbar-width: thin;
+   scrollbar-color: #000 transparent;
+   background-color: transparent;
+   outline: 1px solid #FF9F00;
+}
+.title-input:disabled, .note-text:disabled,
+.note.todo .title-input:disabled, .note.todo .note-text:disabled,
+.note.study .title-input:disabled, .note.study .note-text:disabled,
+.note.health .title-input:disabled, .note.health .note-text:disabled,
+.note.finance .title-input:disabled, .note.finance .note-text:disabled,
+.note.travel .title-input:disabled, .note.travel .note-text:disabled,
+.note.creativity .title-input:disabled, .note.creativity .note-text:disabled {
+   outline: 0;
+}
+.edit-note {
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   border-radius: 50%;
+   border: 0;
+   color: #fff;
+   cursor: pointer;
+   transition: 0.4s;
+   background-color: #000;
+}
+.edit-note:hover {
+   transform: scale(1.1);
+}
+.edit-note:active {
+   transform: scale(0.9);
+}
+.edit-note svg {
+   width: 18px;
+}
+.voice-controls {
+   display: flex;
+   gap: 10px;
+}
+.voice-controls button {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   background: none;
+   border: 1px solid #000;
+   border-radius: 4px;
+   padding: 5px 10px;
+   transition: 0.4s;
+   cursor: pointer;
+}
+.voice-controls button svg {
+   width: 18px;
+}
+.voice-controls button:hover {
+   background-color: #00000028;
+}
+
+/* different types of notes */
+
+/* ToDo note */
+.note.todo {
+   color: #198CFF;
+   background-color: #ECF6FF;
+}
+.note.todo .date-icon-info span {
+   background-color: #198CFF;
+}
+.note.todo .title-input, .note.todo .note-text {
+   color: #198CFF;
+   outline: 1px solid #198CFF;
+}
+.note.todo .title-input::placeholder, .note.todo .note-text::placeholder {
+   color: #198CFF;
+}
+/* Work note */
+.note.work {
+   color: #000;
+   background-color: #F9F9F9;
+}
+.note.work .date-icon-info span {
+   background-color: #E4E6E8;
+}
+.note.work .date-icon-info span svg, .note.work .title-input, .note.work .note-text {
+   color: #000;
+}
+.note.work .date-icon-info span.delete svg {
+   color: #D62F42;
+}
+.note.work .title-input, .note.work .note-text {
+   outline: 1px solid #000;
+}
+.note.work .title-input::placeholder, .note.work .note-text::placeholder {
+   color: #000;
+}
+/* Study note */
+.note.study {
+   color: #C442DE;
+   background-color: #FCEDFF;
+}
+.note.study .date-icon-info span {
+   background-color: #C442DE;
+}
+.note.study .title-input, .note.study .note-text {
+   color: #C442DE;
+   outline: 1px solid #C442DE;
+}
+.note.study .title-input::placeholder, .note.study .note-text::placeholder {
+   color: #C442DE;
+}
+/* Health note */
+.note.health {
+   color: #D62F42;
+   background-color: #FFE8EA;
+}
+.note.health .date-icon-info span {
+   background-color: #D62F42;
+}
+.note.health .title-input, .note.health .note-text {
+   color: #D62F42;
+   outline: 1px solid #D62F42;
+}
+.note.health .title-input::placeholder, .note.health .note-text::placeholder {
+   color: #D62F42;
+}
+/* Finance note */
+.note.finance {
+   color: #6FB720;
+   background-color: #E3F6CE;
+}
+.note.finance .date-icon-info span {
+   background-color: #6FB720;
+}
+.note.finance .title-input, .note.finance .note-text {
+   color: #6FB720;
+   outline: 1px solid #6FB720;  
+}
+.note.finance .title-input::placeholder, .note.finance .note-text::placeholder {
+   color: #6FB720;
+}
+/* Travel note */
+.note.travel {
+   color: #3558C9;
+   background-color: #EAEFFC;
+}
+.note.travel .date-icon-info span {
+   background-color: #3558C9;
+}
+.note.travel .title-input, .note.travel .note-text {
+   color: #3558C9;
+   outline: 1px solid #3558C9;
+}
+.note.travel .title-input::placeholder, .note.travel .note-text::placeholder {
+   color: #3558C9;
+}
+/* Creativity note */
+.note.creativity {
+   color: #AF00FF;
+   background-color: #F4DEFE;
+}
+.note.creativity .date-icon-info span {
+   background-color: #AF00FF;
+}
+.note.creativity .title-input, .note.creativity .note-text {
+   color: #AF00FF;
+   outline: 1px solid #AF00FF;
+}
+.note.creativity .title-input::placeholder, .note.creativity .note-text::placeholder {
+   color: #AF00FF;
+}
+
+/* dark mode */
+
+.note.dark,
+.note.todo.dark,
+.note.work.dark,
+.note.study.dark,
+.note.health.dark,
+.note.finance.dark,
+.note.travel.dark,
+.note.creativity.dark {
+   background-color: #1E1E1E;
+}
+.note.work.dark,
+.note.work.dark .title-input,
+.note.work.dark .title-input::placeholder,
+.note.work.dark .note-text,
+.note.work.dark .note-text::placeholder {
+   color: #fff;
+}
+.note.work.dark .title-input, .note.work.dark .note-text {
+   outline: 1px solid #fff;
+}
+.note.work .title-input:disabled, .note.work .note-text:disabled {
+   outline: 0;
+}
+.note.dark .voice-controls button {
+   border: 1px solid #fff;
+}
+.note.dark .voice-controls button svg, .note.dark .voice-controls button {
+   color: #fff;
+}
+.note.dark .voice-controls button:hover {
+   background-color: #ffffff21;
+}
+
+/* responsive */
+
+@media (max-width: 820px) {
+   .note {
+      width: 340px;
+      height: 250px;
+      padding: 20px;
+      gap: 10px;
+   }  
+}
