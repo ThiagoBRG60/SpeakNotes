@@ -7,17 +7,17 @@ import { categoriesIcons } from "./components/Categories"
 export const selectedContext = createContext()
 
 const App = () => {
-  const savedNotes = localStorage.getItem('notes');
-  const data = JSON.parse(savedNotes);
-  const localStorageNotesCount = localStorage.getItem('count')
-  const countData = JSON.parse(localStorageNotesCount)
-  const localStorageTheme = localStorage.getItem('theme')
-  const themeData = JSON.parse(localStorageTheme)
-  const [notes, setNotes] = useState(data || [])
-  const [notesCount, setNotesCount] = useState(countData || {});
-  const [selected, setSelected] = useState('Notas Rápidas')
-  const [activeSwitch, setActiveSwitch] = useState(themeData || false)
-  const [opened, setOpened] = useState(false)
+  const savedNotes = JSON.parse(localStorage.getItem('notes'))
+  const localStorageNotesCount = JSON.parse(localStorage.getItem('count'))
+  const localStorageTheme = JSON.parse(localStorage.getItem('theme'))
+  const selectedCategory = JSON.parse(localStorage.getItem('category'))
+  const openedMenu = JSON.parse(localStorage.getItem('openedMenu'))
+
+  const [notes, setNotes] = useState(savedNotes || [])
+  const [notesCount, setNotesCount] = useState(localStorageNotesCount || {});
+  const [selected, setSelected] = useState(selectedCategory || 'Notas Rápidas')
+  const [activeSwitch, setActiveSwitch] = useState(localStorageTheme || false)
+  const [opened, setOpened] = useState(openedMenu || false)
 
   function handleMenu() {
      setOpened(prev => !prev)
@@ -41,6 +41,14 @@ const App = () => {
   }
 
   useEffect(() => {
+    localStorage.setItem('openedMenu', JSON.stringify(opened))
+  }, [opened])
+
+  useEffect(() => {
+    localStorage.setItem('category', JSON.stringify(selected))
+  }, [selected])
+
+  useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(activeSwitch))
   }, [activeSwitch])
 
@@ -49,7 +57,6 @@ const App = () => {
   }, [notesCount])
 
   useEffect(() => {
-    localStorage.removeItem('count')
     saveLocalStorage()
 
     const updateCount = {};

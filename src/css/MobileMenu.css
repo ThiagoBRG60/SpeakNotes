@@ -19,7 +19,7 @@
    color: #fff;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 820px), (max-height: 430px) and (orientation: landscape) {
    .mobile-menu {
       width: 200px;
       height: 100dvh;
@@ -65,5 +65,19 @@
 @media (max-width: 390px) {
    .mobile-menu h1 {
       right: 30px;
+   }
+}
+
+@media (max-height: 375px) and (orientation: landscape),
+(max-height: 430px) and (orientation: landscape) {
+   .mobile-menu {
+      height: 100vh;
+   }
+   .mobile-menu svg {
+      top: 5px;
+      left: 5px;
+   }
+   .mobile-menu h1 {
+      display: none;
    }
 }

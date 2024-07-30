@@ -122,7 +122,7 @@ main section.dark .hamburguer-menu {
 
 /* responsive */
 
-@media (max-width: 820px) {
+@media (max-width: 820px), (max-height: 430px) and (orientation: landscape) {
    .hamburguer-menu {
       display: block;
       position: absolute;
@@ -196,5 +196,15 @@ main section.dark .hamburguer-menu {
    .notes-container ul {
       justify-content: center;
       gap: 20px;
+   }
+}
+
+@media (max-height: 375px) and (orientation: landscape) {
+   main, main section {
+      height: 500px;
+   }
+   .section-header .section-categories {
+      position: fixed;
+      top: 40px;
    }
 }
