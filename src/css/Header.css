@@ -61,7 +61,8 @@
 
 /* responsive */
 
-@media (max-width: 820px), (max-height: 430px) and (orientation: landscape), (max-width: 1024px) {
+@media (max-width: 820px), (max-height: 430px) and (orientation: landscape),
+(max-width: 1024px) and (orientation: portrait), (max-width: 1024px) {
    .main-header {
       position: absolute;
       bottom: 0;
@@ -104,6 +105,17 @@
    }
 }
 
+@media (max-width: 932px) and (orientation: landscape) {
+   .main-header {
+      height: 80px;
+      bottom: 0;
+      flex-direction: row;
+   }
+   .header-info {
+      align-self: center;
+   }
+}
+
 @media (max-width: 390px) {
    .main-header {
       padding: 0 10px;
@@ -118,7 +130,7 @@
    }
 }
 
-@media (max-height: 375px) and (orientation: landscape), (max-width: 1024px) {
+@media (max-height: 375px) and (orientation: landscape) {
    .main-header {
       position: fixed;
       height: 80px;

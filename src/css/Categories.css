@@ -80,7 +80,8 @@
 
 /* responsive */
 
-@media (max-width: 820px), (max-height: 430px) and (orientation: landscape) {
+@media (max-width: 820px), (max-height: 430px) and (orientation: landscape),
+(max-width: 1024px) and (orientation: portrait) {
    .categories-header {
       flex-direction: row;
       pointer-events: all;
@@ -113,6 +114,25 @@
    @keyframes slideUp {
       to {
          height: 100%;
+      }
+   }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+   .categories-header {
+      flex-direction: row;
+      align-self: center;
+   }
+   .categories-header::before {
+      width: 0;
+      height: 100%;
+      padding: 8px;
+      bottom: -8px;
+      left: -2px;
+   }
+   @keyframes slideUp {
+      to {
+         width: 100%;
       }
    }
 }
