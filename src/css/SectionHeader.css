@@ -122,6 +122,32 @@ main section.dark .hamburguer-menu {
 
 /* responsive */
 
+@media (max-width: 1440px) {
+   .section-header {
+      height: 170px;
+      padding: 20px 40px;
+   }
+   .section-header .section-categories {
+      gap: 40px;
+   }
+   .notes-container {
+      padding: 20px 40px;
+   }
+}
+
+@media (max-width: 1024px) {
+   .section-header {
+      padding: 20px 10px;
+   }
+   .section-header .section-categories {
+      gap: 30px;
+      font-size: 14px;
+   }
+   .notes-container ul {
+      justify-content: center;
+   }
+}
+
 @media (max-width: 820px), (max-height: 430px) and (orientation: landscape) {
    .hamburguer-menu {
       display: block;
