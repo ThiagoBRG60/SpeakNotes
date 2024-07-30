@@ -46,6 +46,9 @@
 }
 
 /* dark theme */
+.main-header.dark {
+   background-color: #121212;
+}
 .main-header.dark h1 {
    color: #ffffff;
 }
@@ -59,9 +62,6 @@
 /* responsive */
 
 @media (max-width: 820px) {
-   .main-header.dark {
-      background-color: #121212;
-   }
    .main-header {
       position: absolute;
       bottom: 0;
