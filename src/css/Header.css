@@ -46,10 +46,6 @@
 }
 
 /* dark theme */
-
-.main-header.dark {
-   background-color: #121212;
-}
 .main-header.dark h1 {
    color: #ffffff;
 }
@@ -63,6 +59,9 @@
 /* responsive */
 
 @media (max-width: 820px) {
+   .main-header.dark {
+      background-color: #121212;
+   }
    .main-header {
       position: absolute;
       bottom: 0;
@@ -83,13 +82,25 @@
 }
 
 @media (max-width: 540px) {
+   .main-header.dark {
+      background-color: transparent;
+   }
    .main-header {
+      bottom: 10px;
+      height: 100%;
+      flex-direction: column-reverse;
       padding: 0 20px;
+      background-color: transparent;
       gap: 20px;
+      pointer-events: none;
    }
    .main-header button {
       width: 50px;
       height: 50px;
+      pointer-events: all;
+   }
+   .header-info {
+      align-self: flex-start;
    }
 }
 

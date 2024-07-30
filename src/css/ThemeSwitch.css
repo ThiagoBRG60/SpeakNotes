@@ -11,6 +11,7 @@
    border-radius: 50px;
    cursor: pointer;
    overflow: hidden;
+   transition: 0.4s;
 }
 .switch-ball {
    width: 20px;
@@ -62,10 +63,6 @@
    .switch-container {
       top: 32px;
       right: 90px;
-      transition: 0.4s;
-   }
-   .switch-container.openedMenu {
-      right: 225px;
    }
 }
 
@@ -73,15 +70,5 @@
    .switch-container {
       top: 22px;
       right: 70px;
-      transition: 0.4s;
-   }
-   .switch-container.openedMenu {
-      right: 205px;
-   }
-}
-
-@media (max-width: 390px) {
-   .switch-container.openedMenu {
-      right: 180px;
    }
 }

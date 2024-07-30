@@ -169,9 +169,6 @@ main section.dark .hamburguer-menu {
 }
 
 @media (max-width: 540px) {
-   main section {
-      height: 90%;
-   }
    .hamburguer-menu {
       top: 25px;
       right: 20px;

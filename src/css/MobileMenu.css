@@ -1,6 +1,23 @@
 .mobile-menu svg, .mobile-menu h1 {
    display: none;
 }
+/* open and close menu */
+
+.mobile-menu.opened {
+   transform: translateX(0%);
+}
+
+/* dark mode */
+
+.mobile-menu.dark {
+   background-color: #121212;
+}
+.mobile-menu.dark svg {
+   color: #fff;
+}
+.mobile-menu.dark h1 {
+   color: #fff;
+}
 
 @media (max-width: 820px) {
    .mobile-menu {
@@ -30,24 +47,6 @@
       color: #000;
       opacity: 0.5;
    }
-
-   /* open and close menu */
-
-   .mobile-menu.opened {
-      transform: translateX(0%);
-   }
-
-   /* dark mode */
-
-   .mobile-menu.dark {
-      background-color: #121212;
-   }
-   .mobile-menu.dark svg {
-      color: #fff;
-   }
-   .mobile-menu.dark h1 {
-      color: #fff;
-   }
 }
 
 @media (max-width: 540px) {
@@ -64,9 +63,6 @@
 }
 
 @media (max-width: 390px) {
-   .mobile-menu {
-      width: 170px;
-   }
    .mobile-menu h1 {
       right: 30px;
    }

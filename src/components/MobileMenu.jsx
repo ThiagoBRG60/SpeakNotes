@@ -1,5 +1,5 @@
 import { RiCloseLine } from '@remixicon/react';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { selectedContext } from '../App';
 import '../css/MobileMenu.css'
 
