@@ -22,7 +22,7 @@
 @media (max-width: 820px) {
    .mobile-menu {
       width: 200px;
-      height: 100vh;
+      height: 100%;
       position: fixed;
       top: 0;
       right: 0;
