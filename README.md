@@ -17,6 +17,8 @@
    <img src="https://github.com/user-attachments/assets/1809fe12-63ee-493c-ab8c-7e5f8fd0b144" alt="project gif"/>
 </div>
 
+## Sobre
+
 **SpeakNotes** é um aplicativo de notas intuitivo que combina organização e tecnologia. Com funcionalidades para criação e gerenciamento de notas, categorização, reconhecimento de voz e temas personalizáveis, o SpeakNotes é perfeito para quem busca eficiência e flexibilidade na organização de tarefas e ideias.
 
 ## Funcionalidades Principais
