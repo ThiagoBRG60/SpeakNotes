@@ -1,8 +1,19 @@
-# SpeakNotes
+<h1 align="center">
+   SpeakNotes
+</h1>
+
+<p align="center">
+   <img alt="Top language" src="https://img.shields.io/github/languages/top/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   <img alt="Language Count" src="https://img.shields.io/github/languages/count/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   <img alt="Repository Size" src="https://img.shields.io/github/repo-size/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   <img alt="GitHub forks" src="https://img.shields.io/github/forks/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   <a href="https://github.com/ThiagoBRG60/SpeakNotes/tree/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/ThiagoBRG60/SpeakNotes?style=flat-square&color=000000"/>
+   </a>
+</p>
 
 **SpeakNotes** é um aplicativo de notas intuitivo que combina organização e tecnologia. Com funcionalidades para criação e gerenciamento de notas, categorização, reconhecimento de voz e temas personalizáveis, o SpeakNotes é perfeito para quem busca eficiência e flexibilidade na organização de tarefas e ideias.
-
-![Gif do SpeakNotes](./src/assets/README/speaknotes.gif)
 
 ## Funcionalidades Principais
 
